@@ -230,9 +230,28 @@ function SocialIcon({ type }: { type: "facebook" | "ebay" }) {
 
     </a>
   );
+function EbayLogo({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      fill="currentColor"
+      viewBox="0 0 36 24"
+      aria-hidden="true"
+    >
+      <text
+        x="18"
+        y="17.5"
+        textAnchor="middle"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontSize="13"
+        fontWeight="700"
+      >
+        ebay
+      </text>
+    </svg>
+  );
 }
 
-function Hero() {
   return (
     <section
       id="home"
