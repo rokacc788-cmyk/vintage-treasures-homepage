@@ -67,6 +67,7 @@ function Index() {
         <Hero />
         <About />
         <WhatWeSell />
+        <FindUsOnline />
         <MeetTheOwner />
         <VisitUs />
       </main>
@@ -78,6 +79,7 @@ function Index() {
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "What We Sell", href: "#what-we-sell" },
+  { label: "Online", href: "#online" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
@@ -418,6 +420,93 @@ function WhatWeSell() {
 }
 
 
+function FindUsOnline() {
+  return (
+    <section id="online" className="bg-wood py-20 text-wood-foreground md:py-28">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="mb-12 text-center md:mb-16">
+          <span className="font-body text-xs font-semibold uppercase tracking-[0.3em] text-brass">
+            Find Us Online
+          </span>
+          <h2 className="mt-3 font-display text-3xl font-medium text-cream md:text-4xl lg:text-5xl">
+            Follow Us & Shop on eBay
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl font-body text-cream/80">
+            We do not sell directly through this website, but you can keep up with
+            new arrivals, shop events and behind-the-scenes stories on Facebook, or
+            browse selected pieces on our eBay shop.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden rounded-xl border border-brass/30 bg-wood-foreground/5 p-8 transition-all hover:border-brass/70 hover:bg-wood-foreground/10 hover:shadow-2xl hover:shadow-black/30 md:p-10"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brass/10 text-brass transition-colors group-hover:bg-brass group-hover:text-primary-foreground">
+                <svg
+                  className="h-7 w-7"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-medium text-cream md:text-2xl">
+                  Facebook
+                </h3>
+                <p className="mt-1 font-body text-sm text-wood-foreground/70">
+                  New arrivals, events and shop life.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 flex items-center font-body text-sm font-semibold text-brass transition-colors group-hover:text-gold">
+              Visit our page
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </div>
+          </a>
+
+          <a
+            href="https://ebay.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative overflow-hidden rounded-xl border border-brass/30 bg-wood-foreground/5 p-8 transition-all hover:border-brass/70 hover:bg-wood-foreground/10 hover:shadow-2xl hover:shadow-black/30 md:p-10"
+          >
+            <div className="flex items-center gap-4">
+              <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brass/10 text-brass transition-colors group-hover:bg-brass group-hover:text-primary-foreground">
+                <svg
+                  className="h-7 w-7"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M14.411 9.303c-1.05 0-1.884.602-2.202 1.645l-.031.104-.25-1.749h-4.04c-1.343 0-2.4.11-3.281.524-.99.465-1.65 1.263-1.65 2.415 0 .96.443 1.721 1.214 2.2.524.32 1.214.498 2.126.55l.02.001h1.58v-.056c-.002-.698-.355-1.05-1.1-1.05-.594 0-1.026.254-1.198.682l-2.002-.077c.1-.577.424-1.08.938-1.44.593-.418 1.412-.638 2.437-.638 1.2 0 2.05.244 2.552.732.388.375.582.902.582 1.581v3.47l.05.012c.61.16 1.15.24 1.65.24.2 0 .39-.012.57-.036v-1.92c.42.82 1.25 1.32 2.33 1.32 1.52 0 2.55-.91 2.89-2.52l-2.02-.37c-.16.65-.56 1.01-1.13 1.01-.58 0-.92-.37-.92-1.03v-.07h3.87c.05-.25.08-.51.08-.78 0-1.58-.94-2.55-2.47-2.55zm-.52 2.04c.47 0 .78.33.78.87 0 .01 0 .02-.01.03h-1.69v-.03c0-.52.32-.87.78-.87h.14zM8.5 14.1H6.95c-.7 0-1.2-.13-1.49-.39-.24-.21-.37-.51-.37-.88 0-.47.2-.82.62-1.05.44-.24 1.04-.36 1.86-.36h1.88v2.68zM17.65 6.1c-2.05 0-3.45 1.16-3.9 3.11l2.06.35c.2-.93.74-1.4 1.6-1.4.74 0 1.16.37 1.16 1.04 0 .08-.01.16-.03.24l-.01.04-2.34.34c-1.8.27-2.84 1.18-2.84 2.53 0 1.5 1.1 2.46 2.77 2.46 1.13 0 1.95-.47 2.47-1.42l.03.06v1.17h1.93V9.45c0-1.96-1.06-3.35-2.79-3.35zm.67 4.55v.41c0 .87-.53 1.45-1.32 1.45-.58 0-.93-.34-.93-.91 0-.52.34-.86.94-.98l1.31-.24v.27z" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-display text-xl font-medium text-cream md:text-2xl">
+                  eBay Shop
+                </h3>
+                <p className="mt-1 font-body text-sm text-wood-foreground/70">
+                  Selected pieces available to buy online.
+                </p>
+              </div>
+            </div>
+            <div className="mt-6 flex items-center font-body text-sm font-semibold text-brass transition-colors group-hover:text-gold">
+              Browse on eBay
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function MeetTheOwner() {
   return (
     <section className="bg-background py-20 md:py-28">
@@ -620,6 +709,14 @@ function Footer() {
                   className="text-wood-foreground/70 transition-colors hover:text-brass"
                 >
                   What We Sell
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#online"
+                  className="text-wood-foreground/70 transition-colors hover:text-brass"
+                >
+                  Find Us Online
                 </a>
               </li>
               <li>
