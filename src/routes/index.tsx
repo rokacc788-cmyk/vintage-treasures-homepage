@@ -252,7 +252,9 @@ function EbayLogo({ className }: { className?: string }) {
   );
 }
 
+function Hero() {
   return (
+
     <section
       id="home"
       className="relative flex min-h-[80vh] items-center justify-center overflow-hidden"
