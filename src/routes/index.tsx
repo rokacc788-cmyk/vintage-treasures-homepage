@@ -23,6 +23,14 @@ import {
 import heroShop from "@/assets/hero-shop.jpg";
 import owner from "@/assets/owner.jpg";
 import shopFront from "@/assets/shop-front.jpg";
+import catCameras from "@/assets/cat-cameras.jpg";
+import catClothing from "@/assets/cat-clothing.jpg";
+import catOptics from "@/assets/cat-optics.jpg";
+import catFurniture from "@/assets/cat-furniture.jpg";
+import catAntiques from "@/assets/cat-antiques.jpg";
+import catElectronics from "@/assets/cat-electronics.jpg";
+import catUnusual from "@/assets/cat-unusual.jpg";
+import { CategoryCarousel } from "@/components/CategoryCarousel";
 
 export const Route = createFileRoute("/")({
   head: () => ({
