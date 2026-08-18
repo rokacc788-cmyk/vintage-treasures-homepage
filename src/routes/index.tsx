@@ -713,6 +713,14 @@ function Footer() {
               </li>
               <li>
                 <a
+                  href="#online"
+                  className="text-wood-foreground/70 transition-colors hover:text-brass"
+                >
+                  Find Us Online
+                </a>
+              </li>
+              <li>
+                <a
                   href="#about"
                   className="text-wood-foreground/70 transition-colors hover:text-brass"
                 >
