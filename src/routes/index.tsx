@@ -310,42 +310,49 @@ const categories = [
   {
     icon: Camera,
     title: "Cameras & Photography",
+    image: catCameras,
     description:
       "Vintage film cameras, lenses, darkroom equipment and photographic curiosities.",
   },
   {
     icon: Shirt,
     title: "Vintage Clothing",
+    image: catClothing,
     description:
       "Carefully selected garments, accessories and textiles from decades past.",
   },
   {
     icon: Binoculars,
     title: "Binoculars & Optics",
+    image: catOptics,
     description:
       "Brass binoculars, opera glasses, telescopes and other optical instruments.",
   },
   {
     icon: Armchair,
     title: "Furniture",
+    image: catFurniture,
     description:
       "Characterful chairs, tables, cabinets and small pieces for the home.",
   },
   {
     icon: Gem,
     title: "Antiques & Collectibles",
+    image: catAntiques,
     description:
       "Coins, medals, silver, jewellery, prints and small decorative treasures.",
   },
   {
     icon: Radio,
     title: "Vintage Electronics",
+    image: catElectronics,
     description:
       "Radios, record players, typewriters and other classic technology.",
   },
   {
     icon: Compass,
     title: "Unusual Finds",
+    image: catUnusual,
     description:
       "The unexpected, the curious and the one-of-a-kind items that defy category.",
   },
@@ -364,33 +371,44 @@ function WhatWeSell() {
           </h2>
           <p className="mx-auto mt-4 max-w-2xl font-body text-muted-foreground">
             Our stock changes constantly. Here is the kind of thing you can
-            expect to discover on our shelves.
+            expect to discover on our shelves — scroll each row sideways to
+            browse.
           </p>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="space-y-10 md:space-y-14">
           {categories.map((category) => (
-            <Card
+            <div
               key={category.title}
-              className="group border-border bg-card text-card-foreground transition-all hover:-translate-y-1 hover:border-brass/40 hover:shadow-lg"
+              className="rounded-xl border border-border bg-card/60 p-6 md:p-8"
             >
-              <CardContent className="flex flex-col items-center p-8 text-center">
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-secondary text-brass transition-colors group-hover:bg-brass group-hover:text-primary-foreground">
-                  <category.icon className="h-6 w-6" />
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-secondary text-brass">
+                  <category.icon className="h-5 w-5" />
                 </div>
-                <h3 className="font-display text-xl font-medium text-card-foreground">
-                  {category.title}
-                </h3>
-                <p className="mt-2 font-body text-sm leading-relaxed text-muted-foreground">
-                  {category.description}
-                </p>
-              </CardContent>
-            </Card>
+                <div>
+                  <h3 className="font-display text-xl font-medium text-card-foreground md:text-2xl">
+                    {category.title}
+                  </h3>
+                  <p className="mt-1 max-w-2xl font-body text-sm leading-relaxed text-muted-foreground">
+                    {category.description}
+                  </p>
+                </div>
+              </div>
+              <CategoryCarousel
+                title={category.title}
+                items={[1, 2, 3, 4, 5].map((n) => ({
+                  src: category.image,
+                  label: `Sample photo ${n}`,
+                }))}
+              />
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 }
+
 
 function MeetTheOwner() {
   return (
