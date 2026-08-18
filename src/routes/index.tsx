@@ -230,7 +230,10 @@ function SocialIcon({ type }: { type: "facebook" | "ebay" }) {
 
     </a>
   );
+}
+
 function EbayLogo({ className }: { className?: string }) {
+
   return (
     <svg
       className={className}
