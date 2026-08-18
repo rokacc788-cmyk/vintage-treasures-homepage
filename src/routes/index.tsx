@@ -78,6 +78,7 @@ function Index() {
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "What We Sell", href: "#what-we-sell" },
+  { label: "Online", href: "#online" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];
